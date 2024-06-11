@@ -11,6 +11,7 @@ The dataset we used to generate an answer to our project question contains detai
 
 
 Below is a description of all the columns we will be working with:
+
 1.`YEAR`: The year a power outage took place.
 
 2.`MONTH` : The month a power outage took place.
@@ -56,5 +57,7 @@ Below is a description of all the columns we will be working with:
 22.`OUTAGE.START`: A timestamp of when the outage started
 
 23.`OUTAGE.RESTORATION`: A timestamp of when the outage ended
+
+---
 
 
