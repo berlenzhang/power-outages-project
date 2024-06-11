@@ -10,6 +10,7 @@ This project aims to analyze what factors have the greatest impact on the severi
 The dataset we used to generate an answer to our project question contains details of 1535 power outages in the US, each outage being represented by a row. It includes 57 columns containing specific information on the outage. We only used 24 of these columns in our project.
 
 | Syntax | Description |
+| -------| ------------|
 | Syntax | Description |
 
 Below is a description of all the columns we will be working with:
