@@ -3,12 +3,13 @@ Project for DSC80 at UCSD
 
 By Berlen Zhang and Sohan Raval
 
-## **INTRODUCTION**
+## INTRODUCTION
 This project aims to analyze what factors have the greatest impact on the severity of power outages. In this body of work, we answered the question: do different regions and causes affect the severity of power outages in the US? Additionally, we developed a predictive model that forecasts the duration of power outages given a set of details of the outage. This will be a useful tool that allows utility companies to enhance communication with customers when an outage occurs. Being able to inform the public about how long an outage is predicted to last will help in managing and mitigating the consequences of power outages.
 
 
 The dataset we used to generate an answer to our project question contains details of 1535 power outages in the US, each outage being represented by a row. It includes 57 columns containing specific information on the outage. We only used 24 of these columns in our project.
 
+| Syntax | Description |
 | Syntax | Description |
 
 Below is a description of all the columns we will be working with:
@@ -60,5 +61,5 @@ Below is a description of all the columns we will be working with:
 - `OUTAGE.RESTORATION`: A timestamp of when the outage ended
 
 ---
-## **DATA CLEANING AND EXPLORATORY ANALYSIS**
+## DATA CLEANING AND EXPLORATORY ANALYSIS
 
