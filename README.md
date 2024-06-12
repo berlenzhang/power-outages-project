@@ -231,7 +231,9 @@ Below is the Empirical Distribution of our permutation test.
 ---
 ## FRAMING A PREDICTION PROBLEM
 
+The prediction problem we aim to focus on for this project is to build a model that can accurately predict the outage duration using multiple linear regression. Specifically, we plan on predicting values in the `OUTAGE.DURATION` column using other features in the dataset. We chose this response variable because being able to predict the duration of an outage can greatly reduce the negative impacts of a power outage. We believe this would be a valuable asset to companies and those who may be affected by outages. The metrics we chose to evaluate our model are Root Mean Squared Error(RMSE) and R^2 because they are both reliable options of measuring the accuracy of regression models. 
 
+We will only use features that would realistically be accessible during or before an outage. For example, the data in the column `OUTAGE.RESTORATION` would not be available to us during the time of the outage, therefore we will not use it as a feature in our predictive model. 
 
 
 
