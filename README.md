@@ -62,17 +62,18 @@ Below is a description of all the columns we will be working with:
 ## DATA CLEANING AND EXPLORATORY ANALYSIS
 
 **Data Cleaning**
+
 We cleaned the data to better fit our objectives with the following steps:
 1. Edit data frame to only contain the columns we are interested in utilizing in our project:
-  * We dropped columns that would be unnecessary for predicting the duration of a power outage.        The 24 columns displayed above are the ones we decided would be useful for the project.
-2. Replace the zero values in columns `CUSTOMERS.AFFECTED` and `OUTAGE.DURATION` with nan:
-  * It would be unrealistic for an outage to have a duration of zero since this would mean there       was no outage at all. It is also impossible for there to be zero customers affected since this     would signify that no one was there to witness or report the power outage.
-3. Converting columns `OUTAGE.DURATION` and `DEMAND.LOSS.MW` into suitable data types:
-  * The data in the two columns were originally string values. In order to use them in the             necessary data analysis procedures we would conduct, we had to convert them into float values.
+   * We dropped columns that would be unnecessary for predicting the duration of a power outage.        The 24 columns displayed above are the ones we decided would be useful for the project.
+3. Replace the zero values in columns `CUSTOMERS.AFFECTED` and `OUTAGE.DURATION` with nan:
+   * It would be unrealistic for an outage to have a duration of zero since this would mean there       was no outage at all. It is also impossible for there to be zero customers affected since          this would signify that no one was there to witness or report the power outage.
+4. Converting columns `OUTAGE.DURATION` and `DEMAND.LOSS.MW` into suitable data types:
+   * The data in the two columns were originally string values. In order to use them in the             necessary data analysis procedures we would conduct, we had to convert them into float values.
 4. Combining columns `OUTAGE.START.DATE` and  `OUTAGE.START.TIME` into a column named                 `OUTAGE.STARAT`:
-  * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
+   * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
 5. Combining columns `OUTAGE.RESTORATION.DATE` and `OUTAGE.RESTORATION.TIME` into a column named      `OUTAGE.RESTORATION`:
-  * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
+   * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
 
 ---
 ## ASSESSMENT OF MISSNGNESS
