@@ -240,7 +240,7 @@ We will only use features that would realistically be accessible during or befor
 
 Our baseline model for the prediction problem was a linear regression model that used three features: `CAUSE.CATEGORY`, `POPDEN_URBAN`, and `U.S._STATE`. The columns `CAUSE.CATEGORY` and `U.S._STATE` are nominal datatypes, therefore we transformed them using one hot encoding. The column `POPDEN_URBAN` contains quantitative data. We did not transform that column in any way. 
 
-The performance of our baseline model was quite poor. It received an R^2 score of 0.093 and an RMSE of 6282.43 when tested with unseen data. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
+The performance of our baseline model was quite poor. When tested with training data, it received an R^2 score of 0.195 and an RMSE of 4936.88. When tested with unseen data, it received an R^2 score of 0.093 and an RMSE of 6282.43. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
 
 
 
