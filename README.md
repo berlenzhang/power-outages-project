@@ -124,12 +124,6 @@ To observe the relationship between population and outage duration, we created a
 
 To observe how outage duration differs in different parts of the US, we created an interactive choropleth map that displays the average outage duration in each state:
 
-<iframe
-  src="assets/mean-duration-map.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
 
 To observe which outage causes result in the longest outage times, we created a histogram that displays the average outage duration for each cause category:
 
