@@ -1,4 +1,4 @@
-# BERLEN'S A BOT
+# SOHAN'S A BOT
 Project for DSC80 at UCSD
 
 By Berlen Zhang and Sohan Raval
