@@ -85,6 +85,30 @@ Shown below is the first five rows of the cleaned version of the dataframe:
 |       6 |   2012 | Minnesota    | MN            | MRO           | East North Central |            -0.1 | normal             | severe weather     | thunderstorm            |              2550 |              nan |                68200 |          9.19 |       5787064 |       2.60681e+06 |              51598 |            48156 |          277627 |  5.38044e+06 |           2279 |           18.2 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00  |
 |       7 |   2015 | Minnesota    | MN            | MRO           | East North Central |             1.2 | warm               | severe weather     | nan                     |              1740 |              250 |               250000 |         10.43 |       5970339 |       2.67353e+06 |              54431 |            49844 |          292023 |  5.48959e+06 |           2279 |           18.2 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |
 
+
+**Univariate Data Analysis**
+
+To start our project, we wanted to better understand where and when power outages were likely to happen. This would get us an idea of what factors contribute to the occurrence of outages. 
+
+To visualize when power outages take place most, we created the histogram below, which displays the frequency of outages in the dataset for each month:
+*IMBED `outages-per-month` HTML*
+
+To visualize where power outages take place most, we created the pie chart below, which displays the frequency of outages in the dataset for each climate region:
+*IMBED `climate-region-pie` HTML*
+
+**Bivariate Data Analysis**
+
+Since our eventual goal is to build a model that predicts the duration of power outages. We wanted to analyze what factors have a strong influence on outage duration.
+
+To observe the relationship between population and outage duration, we created a scatterplot between the `POPULATION` and `OUTAGE.DURATION` columns:
+*IMBED population-by-duration HTML*
+
+To observe how outage duration differs in different parts of the US, we created an interactive choropleth map that displays the average outage duration in each state:
+*IMBED mean-duration-map HTML*
+
+To observe which outage causes result in the longest outage times, we created a histogram that displays the average outage duration for each cause category:
+*IMBED duration-by-cause HTML*
+
 ---
 ## ASSESSMENT OF MISSNGNESS
 
