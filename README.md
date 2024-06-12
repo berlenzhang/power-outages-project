@@ -134,7 +134,7 @@ To figure out Missingness dependency we will conduct permutation tests on the `D
 
 ***Alternative Hypothesis*** : The distribution of data in the column `CAUSE.CATEGORY` is different depending on the missingess of the column `DEMAND.LOSS.MW`.
 
-***Results*** :After conducting the permutation test, we found a TVD observed test statistic of 0.179 and a p-value of 0.0, as a result, we reject the null hypothesis. The graph below shows the empirical distribution of this test which indicates that the `DEMAND.LOSS.MW` missigness is dependent on the `CAUSE.CATEGORY` column. The **red line** on the graph represents the observed test statistic.
+***Results*** : After conducting the permutation test, we found a TVD observed test statistic of 0.179 and a p-value of 0.0, as a result, we reject the null hypothesis. The graph below shows the empirical distribution of this test which indicates that the `DEMAND.LOSS.MW` missigness is dependent on the `CAUSE.CATEGORY` column. The **red line** on the graph represents the observed test statistic.
 
 <iframe
   src="assets/emp-dist-1.html"
@@ -149,7 +149,7 @@ To figure out Missingness dependency we will conduct permutation tests on the `D
 
 ***Alternative Hypothesis*** : The distribution of the data in the column `CLIMATE.CATEGORY` is different depending on the missingness of the column `DEMAND.LOSS.MW`.
 
-***Results*** :For the second permutation test, we found a TVD observed test statistic of 0.034 and a p-value of 0.314, therefore, we fail to reject the null hypothesis which indicates that the missing values of the 'DEMAND.LOSS.MW column does not depend on the `CLIMATE.CATEGORY` column. The graph below is the empirical distribution of this test and the **red line** on the graph represents the observed test statstic.
+***Results*** : For the second permutation test, we found a TVD observed test statistic of 0.034 and a p-value of 0.314, therefore, we fail to reject the null hypothesis which indicates that the missing values of the 'DEMAND.LOSS.MW column does not depend on the `CLIMATE.CATEGORY` column. The graph below is the empirical distribution of this test and the **red line** on the graph represents the observed test statstic.
 
 <iframe
   src="assets/emp-dist-2.html"
@@ -160,7 +160,7 @@ To figure out Missingness dependency we will conduct permutation tests on the `D
 
 ---
 ## HYPOTHESIS TESTING
-Based on our central question we wanted to better analyze the regions on a larger scale so for this hypothesis test we looked at the distributions of the east and west regions. Although there are no columns that have this data, we used the data from the `CLIMATE.REGION’ column to evaluate the distinction between the two regions based on the average number of `CUSTOMERS.AFFECTED`by power outages.
+Based on our central question we wanted to better analyze the regions on a larger scale so for this hypothesis test we looked at the distributions of the east and west regions. Although there are no columns that have this data, we used the data from the `CLIMATE.REGION` column to evaluate the distinction between the two regions based on the average number of `CUSTOMERS.AFFECTED`by power outages.
 
 ***Null hypothesis*** : The mean amount of customers affected by power outages are the same in Eastern and Western climate regions.
 
@@ -171,9 +171,11 @@ Based on our central question we wanted to better analyze the regions on a large
 ***Significance level*** : 0.5%
 
 PERMUTATION TEST
+
 For this hypothesis test we conducted a permutation test. In order to do this we first found the observed test statistic using Difference in means. To achieve this, we obtained all the values in the `ClMATE.REGION’ column that contains the word ‘west’ to find the average number of customers affected by the outage in the west region. We then did that for the word ‘east’ and found the observed mean difference of 13,795.49.
 
 RESULTS
+
 For the permutation test we conducted 1000 simulations of the test statistic and got a p-value of 0.286. Due to the significance level of 0.5%, we fail to reject the null hypothesis which suggests that on average, customers affected by power outages are the same in Eastern and Western climate regions.
 
 Below is the Empirical Distribution of our permutation test.
