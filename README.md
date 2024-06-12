@@ -147,15 +147,15 @@ In addition to visualizing data trends through plots, we also used dataset aggre
 
 The first data frame we produced displays the mean outage duration and customers affected for each cause category. We chose to focus on the columns `OUTAGE.DURATION` and `CUSTOMERS.AFFECTED` because these metrics are a good representation of the severity of a power outage. This data frame is shown below:
 
-|   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
-|------------------:|---------------------:|
-|          1850.56  |            105451    |
-|         13484     |                 1    |
-|           521.934 |             18753.4  |
-|           200.545 |              7232.72 |
-|          1468.45  |             15999.4  |
-|          3899.71  |            190972    |
-|           747.092 |            211066    |
+| CAUSE.CATEGORY                |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
+|:------------------------------|------------------:|---------------------:|
+| equipment failure             |          1850.56  |            105451    |
+| fuel supply emergency         |         13484     |                 1    |
+| intentional attack            |           521.934 |             18753.4  |
+| islanding                     |           200.545 |              7232.72 |
+| public appeal                 |          1468.45  |             15999.4  |
+| severe weather                |          3899.71  |            190972    |
+| system operability disruption |           747.092 |            211066    |
 
 ---
 ## ASSESSMENT OF MISSNGNESS
