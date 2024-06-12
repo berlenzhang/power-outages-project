@@ -92,11 +92,21 @@ To start our project, we wanted to better understand where and when power outage
 
 To visualize when power outages take place most, we created the histogram below, which displays the frequency of outages in the dataset for each month:
 
-*IMBED `outages-per-month` HTML*
+<iframe
+  src="assets/outages-per-month.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 To visualize where power outages take place most, we created the pie chart below, which displays the frequency of outages in the dataset for each climate region:
 
-*IMBED `climate-region-pie` HTML*
+<iframe
+  src="assets/climate-region-pie.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 ### Bivariate Data Analysis
@@ -105,15 +115,30 @@ Since our eventual goal is to build a model that predicts the duration of power 
 
 To observe the relationship between population and outage duration, we created a scatterplot between the `POPULATION` and `OUTAGE.DURATION` columns:
 
-*IMBED population-by-duration HTML*
+<iframe
+  src="assets/population-by-duration.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 To observe how outage duration differs in different parts of the US, we created an interactive choropleth map that displays the average outage duration in each state:
 
-*IMBED mean-duration-map HTML*
+<iframe
+  src="assets/mean-duration-map.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 To observe which outage causes result in the longest outage times, we created a histogram that displays the average outage duration for each cause category:
 
-*IMBED duration-by-cause HTML*
+<iframe
+  src="assets/duration-by-cause.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 ### Examining Aggregate Statistics
