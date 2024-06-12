@@ -46,7 +46,7 @@ Below is a description of all the columns we will be working with:
 
 - `TOTAL.REALGSP`: 
 
-- `POPULATION`(int): Population of the area affected by the outage
+- `POPULATION`: Population of the area affected by the outage
 
 - `POPDEN_URBAN`: The population density of urban areas in a specified state.
 
@@ -68,7 +68,7 @@ We cleaned the data to better fit our objectives with the following steps:
    * It would be unrealistic for an outage to have a duration of zero since this would mean there       was no outage at all. It is also impossible for there to be zero customers affected since          this would signify that no one was there to witness or report the power outage.
 4. Converting columns `OUTAGE.DURATION` and `DEMAND.LOSS.MW` into suitable data types:
    * The data in the two columns were originally string values. In order to use them in the             necessary data analysis procedures we would conduct, we had to convert them into float values.
-4. Combining columns `OUTAGE.START.DATE` and  `OUTAGE.START.TIME` into a column named                 `OUTAGE.STARAT`:
+4. Combining columns `OUTAGE.START.DATE` and  `OUTAGE.START.TIME` into a column named                 `OUTAGE.START`:
    * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
 5. Combining columns `OUTAGE.RESTORATION.DATE` and `OUTAGE.RESTORATION.TIME` into a column named      `OUTAGE.RESTORATION`:
    * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
