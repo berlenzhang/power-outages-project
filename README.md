@@ -233,7 +233,14 @@ Below is the Empirical Distribution of our permutation test.
 
 The prediction problem we aim to focus on for this project is to build a model that can accurately predict the outage duration using multiple linear regression. Specifically, we plan on predicting values in the `OUTAGE.DURATION` column using other features in the dataset. We chose this response variable because being able to predict the duration of an outage can greatly reduce the negative impacts of a power outage. We believe this would be a valuable asset to companies and those who may be affected by outages. The metrics we chose to evaluate our model are Root Mean Squared Error(RMSE) and R^2 because they are both reliable options of measuring the accuracy of regression models. 
 
-We will only use features that would realistically be accessible during or before an outage. For example, the data in the column `OUTAGE.RESTORATION` would not be available to us during the time of the outage, therefore we will not use it as a feature in our predictive model. 
+We will only use features that would realistically be accessible during or before an outage. For example, the data in the column `OUTAGE.RESTORATION` would not be available to us during the time of the outage, therefore we will not use it as a feature in our predictive model.
+
+---
+## BASELINE MODEL
+
+Our baseline model for the prediction problem was a linear regression model that used three features: `CAUSE.CATEGORY`, `POPDEN_URBAN`, and `U.S._STATE`. The columns `CAUSE.CATEGORY` and `U.S._STATE` are nominal datatypes, therefore we transformed them using one hot encoding. The column `POPDEN_URBAN` contains quantitative data. We did not transform that column in any way. 
+
+The performance of our baseline model was quite poor. It received an R^2 score of 0.184 and an RMSE of 5459.19. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
 
 
 
