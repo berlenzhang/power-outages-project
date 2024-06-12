@@ -91,9 +91,11 @@ Shown below is the first five rows of the cleaned version of the dataframe:
 To start our project, we wanted to better understand where and when power outages were likely to happen. This would get us an idea of what factors contribute to the occurrence of outages. 
 
 To visualize when power outages take place most, we created the histogram below, which displays the frequency of outages in the dataset for each month:
+
 *IMBED `outages-per-month` HTML*
 
 To visualize where power outages take place most, we created the pie chart below, which displays the frequency of outages in the dataset for each climate region:
+
 *IMBED `climate-region-pie` HTML*
 
 **Bivariate Data Analysis**
@@ -101,12 +103,15 @@ To visualize where power outages take place most, we created the pie chart below
 Since our eventual goal is to build a model that predicts the duration of power outages. We wanted to analyze what factors have a strong influence on outage duration.
 
 To observe the relationship between population and outage duration, we created a scatterplot between the `POPULATION` and `OUTAGE.DURATION` columns:
+
 *IMBED population-by-duration HTML*
 
 To observe how outage duration differs in different parts of the US, we created an interactive choropleth map that displays the average outage duration in each state:
+
 *IMBED mean-duration-map HTML*
 
 To observe which outage causes result in the longest outage times, we created a histogram that displays the average outage duration for each cause category:
+
 *IMBED duration-by-cause HTML*
 
 ---
