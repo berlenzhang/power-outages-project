@@ -61,7 +61,7 @@ Below is a description of all the columns we will be working with:
 ---
 ## DATA CLEANING AND EXPLORATORY ANALYSIS
 
-**Data Cleaning**
+### Data Cleaning
 
 We cleaned the data to better fit our objectives with the following steps:
 1. Edit data frame to only contain the columns we are interested in utilizing in our project:
@@ -86,7 +86,7 @@ Shown below is the first five rows of the cleaned version of the dataframe:
 |       7 |   2015 | Minnesota    | MN            | MRO           | East North Central |             1.2 | warm               | severe weather     | nan                     |              1740 |              250 |               250000 |         10.43 |       5970339 |       2.67353e+06 |              54431 |            49844 |          292023 |  5.48959e+06 |           2279 |           18.2 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |
 
 
-**Univariate Data Analysis**
+### Univariate Data Analysis
 
 To start our project, we wanted to better understand where and when power outages were likely to happen. This would get us an idea of what factors contribute to the occurrence of outages. 
 
@@ -98,7 +98,8 @@ To visualize where power outages take place most, we created the pie chart below
 
 *IMBED `climate-region-pie` HTML*
 
-**Bivariate Data Analysis**
+
+### Bivariate Data Analysis
 
 Since our eventual goal is to build a model that predicts the duration of power outages. We wanted to analyze what factors have a strong influence on outage duration.
 
@@ -113,6 +114,23 @@ To observe how outage duration differs in different parts of the US, we created 
 To observe which outage causes result in the longest outage times, we created a histogram that displays the average outage duration for each cause category:
 
 *IMBED duration-by-cause HTML*
+
+
+### Examining Aggregate Statistics
+
+In addition to visualizing data trends through plots, we also used dataset aggregation techniques to observe the features that have a large impact on the severity of an outage.
+
+The first data frame we produced displays the mean outage duration and customers affected for each cause category. We chose to focus on the columns `OUTAGE.DURATION` and `CUSTOMERS.AFFECTED` because these metrics are a good representation of the severity of a power outage. This data frame is shown below:
+
+|   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
+|------------------:|---------------------:|
+|          1850.56  |            105451    |
+|         13484     |                 1    |
+|           521.934 |             18753.4  |
+|           200.545 |              7232.72 |
+|          1468.45  |             15999.4  |
+|          3899.71  |            190972    |
+|           747.092 |            211066    |
 
 ---
 ## ASSESSMENT OF MISSNGNESS
