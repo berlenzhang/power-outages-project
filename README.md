@@ -223,6 +223,15 @@ For the permutation test we conducted 1000 simulations of the test statistic and
 
 Below is the Empirical Distribution of our permutation test.
 
+<iframe
+  src="assets/emp-dist-3.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+---
+## FRAMING A PREDICTION PROBLEM
+
 
 
 
