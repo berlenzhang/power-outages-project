@@ -74,7 +74,7 @@ We believe that the `RESTORATION.TIME` column is likely NMAR. If the restoration
 
 To figure out Missingness dependency we will conduct permutation tests on the `DEMAND.LOSS.MW` column based on the columns `CAUSE.CATEGORY` and `CLIMATE.CATEGORY`. In both permutation tests we used the Total Variation Distance(TVD) test statistic and used a 0.5 significance level.
 
-*Permutation test for CAUSE.CATEGORY:*
+*PERMUTATION TEST FOR CAUSE.CATEGORY:*
 
 ***Null Hypothesis*** : The distribution of the data in the column `CAUSE.CATEGORY` column is the same regardless of the missingness of the column `CAUSE.CATEGORY.DETAIL`. 
 
@@ -89,7 +89,7 @@ To figure out Missingness dependency we will conduct permutation tests on the `D
   frameborder="0"
 ></iframe>
 
-*Permutation test for CLIMATE.CATEGORY:*
+*PERMUTATION TEST FOR CLIMATE.CATEGORY:*
 
 ***Null Hypothesis*** : The distribution of the data in the column `CLIMATE.CATEGORY` is the same regardless of the missingess of the column `DEMAND.LOSS.MW`.
 
