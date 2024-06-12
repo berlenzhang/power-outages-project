@@ -89,7 +89,7 @@ After conducting the permutation test, we found a TVD observed test statistic of
   frameborder="0"
 ></iframe>
 
-**Permutation test for `CLIMATE.CATEGORY`:**
+**Permutation test for CLIMATE.CATEGORY:**
 
 ***Null Hypothesis***: The distribution of the data in the column `CLIMATE.CATEGORY` is the same regardless of the missingess of the column `DEMAND.LOSS.MW`.
 
