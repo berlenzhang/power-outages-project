@@ -78,7 +78,7 @@ To figure out Missingness dependency we will conduct permutation tests on the `D
 
 ***Null Hypothesis***: The distribution of the data in the column `CAUSE.CATEGORY` column is the same regardless of the missingness of the column `CAUSE.CATEGORY.DETAIL`. 
 
-***Alternative Hypothesis**: The distribution of data in the column `CAUSE.CATEGORY` is different depending on the missingess of the column `DEMAND.LOSS.MW`.
+***Alternative Hypothesis***: The distribution of data in the column `CAUSE.CATEGORY` is different depending on the missingess of the column `DEMAND.LOSS.MW`.
 
 After conducting the permutation test, we found a TVD observed test statistic of 0.179 and a p-value of 0.0, as a result, we reject the null hypothesis. The graph below shows the empirical distribution of this test which indicates that the `DEMAND.LOSS.MW` missigness is dependent on the `CAUSE.CATEGORY` column. The **red line** on the graph represents the observed test statistic.
 
