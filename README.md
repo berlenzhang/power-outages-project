@@ -74,13 +74,13 @@ We believe that the `RESTORATION.TIME` column is likely NMAR. If the restoration
 
 To figure out Missingness dependency we will conduct permutation tests on the `DEMAND.LOSS.MW` column based on the columns `CAUSE.CATEGORY` and `CLIMATE.CATEGORY`. In both permutation tests we used the Total Variation Distance(TVD) test statistic and used a 0.5 significance level.
 
-**Permutation test for CAUSE.CATEGORY:**
+*Permutation test for CAUSE.CATEGORY:*
 
-***Null Hypothesis***: The distribution of the data in the column `CAUSE.CATEGORY` column is the same regardless of the missingness of the column `CAUSE.CATEGORY.DETAIL`. 
+***Null Hypothesis*** : The distribution of the data in the column `CAUSE.CATEGORY` column is the same regardless of the missingness of the column `CAUSE.CATEGORY.DETAIL`. 
 
-***Alternative Hypothesis***: The distribution of data in the column `CAUSE.CATEGORY` is different depending on the missingess of the column `DEMAND.LOSS.MW`.
+***Alternative Hypothesis*** : The distribution of data in the column `CAUSE.CATEGORY` is different depending on the missingess of the column `DEMAND.LOSS.MW`.
 
-After conducting the permutation test, we found a TVD observed test statistic of 0.179 and a p-value of 0.0, as a result, we reject the null hypothesis. The graph below shows the empirical distribution of this test which indicates that the `DEMAND.LOSS.MW` missigness is dependent on the `CAUSE.CATEGORY` column. The **red line** on the graph represents the observed test statistic.
+***Results*** :After conducting the permutation test, we found a TVD observed test statistic of 0.179 and a p-value of 0.0, as a result, we reject the null hypothesis. The graph below shows the empirical distribution of this test which indicates that the `DEMAND.LOSS.MW` missigness is dependent on the `CAUSE.CATEGORY` column. The **red line** on the graph represents the observed test statistic.
 
 <iframe
   src="assets/emp-dist-1.html"
@@ -89,13 +89,13 @@ After conducting the permutation test, we found a TVD observed test statistic of
   frameborder="0"
 ></iframe>
 
-**Permutation test for CLIMATE.CATEGORY:**
+*Permutation test for CLIMATE.CATEGORY:*
 
-***Null Hypothesis***: The distribution of the data in the column `CLIMATE.CATEGORY` is the same regardless of the missingess of the column `DEMAND.LOSS.MW`.
+***Null Hypothesis*** : The distribution of the data in the column `CLIMATE.CATEGORY` is the same regardless of the missingess of the column `DEMAND.LOSS.MW`.
 
-***Alternative Hypothesis***: The distribution of the data in the column `CLIMATE.CATEGORY` is different depending on the missingness of the column `DEMAND.LOSS.MW`.
+***Alternative Hypothesis*** : The distribution of the data in the column `CLIMATE.CATEGORY` is different depending on the missingness of the column `DEMAND.LOSS.MW`.
 
-For the second permutation test, we found a TVD observed test statistic of 0.034 and a p-value of 0.314, therefore, we fail to reject the null hypothesis which indicates that the missing values of the 'DEMAND.LOSS.MW column does not depend on the `CLIMATE.CATEGORY` column. The graph below is the empirical distribution of this test and the **red line** on the graph represents the observed test statstic.
+***Results*** :For the second permutation test, we found a TVD observed test statistic of 0.034 and a p-value of 0.314, therefore, we fail to reject the null hypothesis which indicates that the missing values of the 'DEMAND.LOSS.MW column does not depend on the `CLIMATE.CATEGORY` column. The graph below is the empirical distribution of this test and the **red line** on the graph represents the observed test statstic.
 
 <iframe
   src="assets/emp-dist-2.html"
