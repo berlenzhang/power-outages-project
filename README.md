@@ -24,8 +24,6 @@ Below is a description of all the columns we will be working with:
 
 - `CLIMATE.REGION`: 9 regions consistent with the climate as produced by the National Centers for Environmental Information(NCEI) scientists.
 
-- `ANOMALY.LEVEL`: 
-
 - `CLIMATE.CATEGORY`: The state of the Climate when the outage occurred.
 
 - `CAUSE.CATEGORY`: The cause of the outage.
