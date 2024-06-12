@@ -213,11 +213,11 @@ Based on our central question we wanted to better analyze the regions on a large
 
 ***Significance level*** : 0.5%
 
-PERMUTATION TEST
+*PERMUTATION TEST*
 
 For this hypothesis test we conducted a permutation test. In order to do this we first found the observed test statistic using Difference in means. To achieve this, we obtained all the values in the `ClMATE.REGION’ column that contains the word ‘west’ to find the average number of customers affected by the outage in the west region. We then did that for the word ‘east’ and found the observed mean difference of 13,795.49.
 
-RESULTS
+*RESULTS*
 
 For the permutation test we conducted 1000 simulations of the test statistic and got a p-value of 0.286. Due to the significance level of 0.5%, we fail to reject the null hypothesis which suggests that on average, customers affected by power outages are the same in Eastern and Western climate regions.
 
