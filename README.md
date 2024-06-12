@@ -229,7 +229,8 @@ Below is the Empirical Distribution of our permutation test.
 ></iframe>
 
 ---
-## FRAMING A PREDECTION PROBLEM
+## FRAMING A PREDICTION PROBLEM
+
 
 
 
