@@ -201,9 +201,9 @@ To figure out Missingness dependency we will conduct permutation tests on the `D
 ## HYPOTHESIS TESTING
 Based on our central question we wanted to better analyze the regions on a larger scale so for this hypothesis test we looked at the distributions of the east and west regions. Although there are no columns that have this data, we used the data from the `CLIMATE.REGION` column to evaluate the distinction between the two regions based on the average number of `CUSTOMERS.AFFECTED`by power outages.
 
-***Null hypothesis*** : The mean amount of customers affected by power outages are the same in Eastern and Western climate regions.
+***Null Hypothesis*** : The mean amount of customers affected by power outages are the same in Eastern and Western climate regions.
 
-***Alternative*** : The mean amount of customers affected by power outages in the Western climate region are greater than the Eastern climate region. 
+***Alternative Hypothesis*** : The mean amount of customers affected by power outages in the Western climate region are greater than the Eastern climate region. 
 
 ***Test Statistic*** : Difference in means between the word ‘west’ and ‘east’, contained in the `CLIMATE.REGION` column.
 
@@ -268,11 +268,12 @@ For our fairness analysis we decided to look at the groups of outage duration be
 
 *PERMUTATION TEST*
 
-***Null hypothesis*** : 
+***Null Hypothesis*** : Our model is fair, precison for outage duration before 2011 and after 2011 are roughly the same and any differences are due to random chance
 
-***Alternative*** : 
+***Alternative Hypothesis*** : Our model is unfair, precison for outage duration before 2011 is lower than the outage duration after 2011 
 
 *CONCLUSION*
+First we found an observed RMSE difference of 723.42 and then conducted a permutation test of 1000 simulations. As a result, we got a p-value of 0.722 indicating that we reject the null hypothesis and concluding that the precison
 
 
 
