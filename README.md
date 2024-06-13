@@ -1,4 +1,4 @@
-# SOHAN'S A BOT
+# PERFORMING POWER OUTAGE ANALYSIS
 Project for DSC80 at UCSD
 
 By Berlen Zhang and Sohan Raval
@@ -32,11 +32,11 @@ Below is a description of all the columns we will be working with:
 
 - `OUTAGE.DURATION`: How long the outage lasted in minutes
 
-- `DEMAND.LOSS.MW`: 
+- `DEMAND.LOSS.MW`: The demand loss by megawatt
 
 - `CUSTOMERS.AFFECTED`: The amount of customers affected by the outage
 
-- `TOTAL.SALES`:
+- `TOTAL.SALES`: The amount of energy consumed by megawatt per hour
 
 - `PC.REALGSP.STATE`: The economic output of a state at the time of the outage.
 
@@ -60,8 +60,8 @@ We cleaned the data to better fit our objectives with the following steps:
    * We dropped columns that would be unnecessary for predicting the duration of a power outage.        The 24 columns displayed above are the ones we decided would be useful for the project.
 3. Replace the zero values in columns `CUSTOMERS.AFFECTED` and `OUTAGE.DURATION` with nan:
    * It would be unrealistic for an outage to have a duration of zero since this would mean there       was no outage at all. It is also impossible for there to be zero customers affected since          this would signify that no one was there to witness or report the power outage.
-4. Converting columns `OUTAGE.DURATION` and `DEMAND.LOSS.MW` into suitable data types:
-   * The data in the two columns were originally string values. In order to use them in the             necessary data analysis procedures we would conduct, we had to convert them into float values.
+4. Converting columns `OUTAGE.DURATION`, `DEMAND.LOSS.MW`, `POPDEN_URBAN`, `CUSTOMERS.AFFECTED`, `TOTAL.SALES`, `PC.REALGSP.STATE`, 'POPDEN.RURAL` into suitable data types:
+   * The data in the columns were originally string values. In order to use them in the             necessary data analysis procedures we would conduct, we had to convert them into float values.
 4. Combining columns `OUTAGE.START.DATE` and  `OUTAGE.START.TIME` into a column named                 `OUTAGE.START`:
    * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
 5. Combining columns `OUTAGE.RESTORATION.DATE` and `OUTAGE.RESTORATION.TIME` into a column named      `OUTAGE.RESTORATION`:
@@ -234,12 +234,14 @@ We will only use features that would realistically be accessible during or befor
 
 Our baseline model for the prediction problem was a linear regression model that used three features: `CAUSE.CATEGORY`, `POPDEN_URBAN`, and `U.S._STATE`. The columns `CAUSE.CATEGORY` and `U.S._STATE` are nominal datatypes, therefore we transformed them using one hot encoding. The column `POPDEN_URBAN` contains quantitative data. We did not transform that column in any way. 
 
-The performance of our baseline model was quite poor. When tested with training data, it received an R^2 score of 0.195 and an RMSE of 4936.88. When tested with unseen data, it received an R^2 score of 0.093 and an RMSE of 6282.43. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
+The performance of our baseline model was quite poor. When tested with training data, it received an RMSE of 4936.88 and when tested with unseen data, it received an RMSE of 6282.43. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
 
 ---
 ## Final Model
 
-For our final model we decided to change our model from a linear regression to a Random Forest Regressor in order to make certain modifcations in attempts to decrease our root mean sqaured error. We realized that the columns we used in our baseline model are not fully correlated to the `OUTAGE.DURATION` so we first found all the columns in the dataset that are correlated to our target column. Additionally, we automated the feature evaluating process by creating a for loop that found the features that produced the least 
+For our final model we decided to change our model from a linear regression to a Random Forest Regressor in order to make certain modifcations in attempts to decrease our root mean sqaured error. We realized that the columns we used in our baseline model are not fully correlated to the `OUTAGE.DURATION` so we first found all the columns in the dataset that are correlated to our target column. Additionally, we automated the feature evaluating process, which found the features that produced the least root mean sqaured errors. This helped us find the features to include in our model and also realize that features we used in the baseline model were hurting our model's accuracy.
+
+Our Final Model included the features 
 
 
 
