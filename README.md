@@ -264,6 +264,16 @@ Our Final Model included the features
 
 ----
 ## Fairness Analysis
+For our fairness analysis we decided to look at the groups of outage duration before 2011 and after 2011 to see if our model is fair. Our group X will be outage duration before 2011 and our group Y wil be the outage duration after 2011. The evalution metric we will be using is **Root Mean Squared Error(RMSE)** with a **signficance value of 0.05**. We will be using a permutation test in order to figure out the fairness of our model and our observed test statistic will be the **absolute difference in RMSE**.
+
+*PERMUTATION TEST*
+
+***Null hypothesis*** : 
+
+***Alternative*** : 
+
+*CONCLUSION*
+
 
 
 
