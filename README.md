@@ -207,7 +207,7 @@ Based on our central question we wanted to better analyze the regions on a large
 
 ***Test Statistic*** : Difference in means between the word ‘west’ and ‘east’, contained in the `CLIMATE.REGION` column.
 
-***Significance level*** : 0.05%
+***Significance level*** : 0.05
 
 *PERMUTATION TEST*
 
@@ -215,7 +215,7 @@ For this hypothesis test we conducted a permutation test. In order to do this we
 
 *RESULTS*
 
-For the permutation test we conducted **1000 simulations** of the test statistic and got a **p-value of 0.286**. Due to the significance level of 0.05%, we fail to reject the null hypothesis, meaning their is nothing to suggest that the average customers affected in the Western climate regions is greater than the Eastern climate regions.
+For the permutation test we conducted **1000 simulations** of the test statistic and got a **p-value of 0.286**. Due to the significance level of 0.05, we fail to reject the null hypothesis, meaning their is nothing to suggest that the average customers affected in the Western climate regions is greater than the Eastern climate regions.
 
 Below is the Empirical Distribution of our permutation test.
 
