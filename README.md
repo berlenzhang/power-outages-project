@@ -7,7 +7,7 @@ By Berlen Zhang and Sohan Raval
 This project aims to analyze what factors have the greatest impact on the severity of power outages. In our work, we answered the question: do different regions and causes affect the severity of power outages in the US? Additionally, we developed a predictive model that forecasts the duration of power outages given a set of details of the outage. This will be a useful tool that allows utility companies to enhance communication with customers when an outage occurs. Being able to inform the public about how long an outage is predicted to last will help in managing and mitigating the consequences of power outages.
 
 
-The dataset we used to generate an answer to our project question contains details of 1535 power outages in the US, each outage being represented by a row. It includes 57 columns containing specific information on the outage. We only used 24 of these columns in our project.
+The dataset we used to generate an answer to our project question contains details of 1535 power outages in the US, each outage being represented by a row. It includes 57 columns containing specific information on the outage. We only used 23 of these columns in our project.
 
 
 Below is a description of all the columns we will be working with:
@@ -57,7 +57,7 @@ Below is a description of all the columns we will be working with:
 
 We cleaned the data to better fit our objectives with the following steps:
 1. Edit data frame to only contain the columns we are interested in utilizing in our project:
-   * We dropped columns that would be unnecessary for predicting the duration of a power outage.        The 24 columns displayed above are the ones we decided would be useful for the project.
+   * We dropped columns that would be unnecessary for predicting the duration of a power outage.        The 23 columns displayed above are the ones we decided would be useful for the project.
 3. Replace the zero values in columns `CUSTOMERS.AFFECTED` and `OUTAGE.DURATION` with nan:
    * It would be unrealistic for an outage to have a duration of zero since this would mean there       was no outage at all. It is also impossible for there to be zero customers affected since          this would signify that no one was there to witness or report the power outage.
 4. Converting columns `OUTAGE.DURATION`, `DEMAND.LOSS.MW`, `POPDEN_URBAN`, `CUSTOMERS.AFFECTED`, `TOTAL.SALES`, `PC.REALGSP.STATE`, `POPDEN.RURAL` into suitable data types:
