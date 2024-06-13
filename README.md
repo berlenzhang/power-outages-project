@@ -257,12 +257,7 @@ The modeling algorithm we ultimately decided on was Random Forest Regression. We
  * 'lin-reg__max_depth': 10
  * 'lin-reg__n_estimators': 101
 
-Our final significantly outperformed our baseline model. 
-
-
-
-
-
+Our final model significantly outperformed our baseline model. The RMSE of our final model when tested on unseen data was 6490.055, over 500 RMSE lower than that of our baseline. 
 
 ----
 ## Fairness Analysis
