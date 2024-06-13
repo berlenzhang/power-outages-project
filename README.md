@@ -273,12 +273,13 @@ For our fairness analysis we decided to look at the groups of outage duration be
 ***Alternative Hypothesis*** : Our model is unfair, precison for outage duration before 2011 is lower than the outage duration after 2011 
 
 *CONCLUSION*
-First we found an observed RMSE difference of 723.42 and then conducted a permutation test of 1000 simulations. As a result, we got a p-value of 0.722 indicating that we reject the null hypothesis and concluding that the precison for outage duration before 2011 and after 2011 are roughly the same,cConcluding that our model is fair.
+First we found an observed RMSE difference of 723.42 and then conducted a permutation test of 1000 simulations. As a result, we got a p-value of 0.722 indicating that we reject the null hypothesis and concluding that the precison for outage duration before 2011 and after 2011 are roughly the same, concluding that our model is fair.
 
+<iframe
+  src="assets/emp-dist-4.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
-
-
-
-
-
-
+---
