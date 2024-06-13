@@ -60,12 +60,16 @@ We cleaned the data to better fit our objectives with the following steps:
    * We dropped columns that would be unnecessary for predicting the duration of a power outage.        The 24 columns displayed above are the ones we decided would be useful for the project.
 3. Replace the zero values in columns `CUSTOMERS.AFFECTED` and `OUTAGE.DURATION` with nan:
    * It would be unrealistic for an outage to have a duration of zero since this would mean there       was no outage at all. It is also impossible for there to be zero customers affected since          this would signify that no one was there to witness or report the power outage.
-4. Converting columns `OUTAGE.DURATION`, `DEMAND.LOSS.MW`, `POPDEN_URBAN`, `CUSTOMERS.AFFECTED`, `TOTAL.SALES`, `PC.REALGSP.STATE`, 'POPDEN.RURAL` into suitable data types:
+4. Converting columns `OUTAGE.DURATION`, `DEMAND.LOSS.MW`, `POPDEN_URBAN`, `CUSTOMERS.AFFECTED`, `TOTAL.SALES`, `PC.REALGSP.STATE`, `POPDEN.RURAL` into suitable data types:
    * The data in the columns were originally string values. In order to use them in the             necessary data analysis procedures we would conduct, we had to convert them into float values.
 4. Combining columns `OUTAGE.START.DATE` and  `OUTAGE.START.TIME` into a column named                 `OUTAGE.START`:
    * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
 5. Combining columns `OUTAGE.RESTORATION.DATE` and `OUTAGE.RESTORATION.TIME` into a column named      `OUTAGE.RESTORATION`:
-   * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use in calculations.
+   * Originally these columns contained string type values. We combined them into a column and          converted them into timestamp objects, making the data more convenient to use      in calculations.
+6. Replacing all the nans in the `CLIMATE.REGION` column with the text 'No Climate Region'
+   * The missing values in this column were missing by design.
+7. Filtered out Alaska
+   * Alaska was severly underepresented in the dataset. The only instance of Alaska in the dataset had missing values in many of the other colummns.
 
 Shown below is the first five rows of the cleaned version of the dataframe:
 
