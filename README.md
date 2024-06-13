@@ -243,7 +243,7 @@ The performance of our baseline model was quite poor. When tested with training 
 ---
 ## Final Model
 
-For our final model we decided to change our model from a linear regression to a Random Forest Regressor in order to make certain modifcations in attempts to decrease our root mean sqaured error. We realized that the columns we used in our baseline model are not fully correlated to the `OUTAGE.DURATION` so we first found all the columns in the dataset that are correlated to our target column. Additionally, we automated the feature evaluating process, which found the features that produced the least root mean sqaured errors. This helped us find the features to include in our model and also realize that features we used in the baseline model were hurting our model's accuracy.
+To improve upon our baseline model, we decided to change our model from a linear regression to a Random Forest Regressor model. This would allow us to effectively use GridSearch CV to find the best hyperparameters. To obtain the features that would optimize our model's predictive ability, we used data frame manipulation techniques to find the columns with the highest correlation to our target column `OUTAGE.DURATION`. Additionally, we automated the feature evaluating process, which iterated through the potential features and found the ones that produced the least root mean squared errors. This process helped us choose the features that maximizes the performance of our final model.
 
 Our Final Model included the features 
 
