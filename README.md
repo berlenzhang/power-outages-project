@@ -245,17 +245,14 @@ The performance of our baseline model was quite poor. When tested with training 
 
 To improve upon our baseline model, we decided to change our model from a linear regression to a Random Forest Regressor model. This would allow us to effectively use GridSearch CV to find the best hyperparameters. To obtain the features that would optimize our model's predictive ability, we used data frame manipulation techniques to find the columns with the highest correlation to our target column `OUTAGE.DURATION`. Additionally, we automated the feature evaluating process, which iterated through the potential features and found the ones that produced the least root mean squared errors. This process helped us choose the features that maximizes the performance of our final model.
 
-Our Final Model included the features 
+The features included in our final model were `TOTAL.SALES`, `POPDEN_URBAN`, `POPDEN_RURAL`, `CUSTOMERS.AFFECTED`, and `CAUSE.CATEGORY`. We believe these improved our accuracy because of the following reasons:
+  * `TOTAL.SALES`: if the duration of an outage is longer, it is likely that the total sales of that outage        would be high.
+  * `POPDEN_URBAN`: a more urban population is likely to have access to more capable resources, therefore the      duration may be shorter.
+  * `POPDEN_RURAL`: rural areas tend to be more spread out, suggesting that fixing power outages may take          longer.
+  * `CUSTOMERS.AFFECTED`: if an outage duration lasts longer, it is likely to have affected a greater amount        of people.
+  * `CAUSE.CATEGORY`: different causes to power outages likely have different outage durations due to the           processes required to restore power
 
-
-
-
-
-
-
-
-
-
+The modeling al
 
 
 
