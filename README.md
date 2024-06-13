@@ -252,7 +252,12 @@ The features included in our final model were `TOTAL.SALES`, `POPDEN_URBAN`, `PO
   * `CUSTOMERS.AFFECTED`: if an outage duration lasts longer, it is likely to have affected a greater amount        of people.
   * `CAUSE.CATEGORY`: different causes to power outages likely have different outage durations due to the           processes required to restore power
 
-The modeling al
+The modeling algorithm we ultimately decided on was Random Forest Regression. We used GridSearch CV to tune the hyperparameters and achieved the following results:
+ * 'lin-reg__criterion': 'absolute_error'
+ * 'lin-reg__max_depth': 10
+ * 'lin-reg__n_estimators': 101
+
+Our final significantly outperformed our baseline model. 
 
 
 
