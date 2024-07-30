@@ -1,10 +1,9 @@
 # PERFORMING POWER OUTAGE ANALYSIS
-Project for DSC80 at UCSD
-
 By Berlen Zhang and Sohan Raval
 
 ## INTRODUCTION
-This project aims to analyze what factors have the greatest impact on the severity of power outages. In our work, we answered the question: do different regions and causes affect the severity of power outages in the US? Additionally, we developed a predictive model that forecasts the duration of power outages given a set of details of the outage. This will be a useful tool that allows utility companies to enhance communication with customers when an outage occurs. Being able to inform the public about how long an outage is predicted to last will help in managing and mitigating the consequences of power outages.
+This project aims to analyze what factors have the greatest impact on the severity of power outages. In our work, we answered the question: do different regions and causes affect the severity of power outages in the US? In this project we have three different parts. The first part aims to develop an understanding of outage duration in the U.S and the second part discusses the possible impacts the missingness of certain columns has on the overall data. 
+The last part, we developed a predictive model that forecasts the cause of power outages given a set of details of the outage. This will be a useful tool that allows utility companies to enhance communication with customers when an outage occurs. Being able to inform the public about what the specfic cause of an outage is will help in managing and mitigating the consequences of power outages.
 
 
 The dataset we used to generate an answer to our project question contains details of 1535 power outages in the US, each outage being represented by a row. It includes 57 columns containing specific information on the outage. We only used 23 of these columns in our project.
@@ -107,7 +106,7 @@ To visualize where power outages take place most, we created the pie chart below
 
 ### Bivariate Data Analysis
 
-Since our eventual goal is to build a model that predicts the duration of power outages. We wanted to analyze what factors have a strong influence on outage duration.
+In order to understand the duration of power outages, we wanted to analyze what factors have a strong correlation on outage duration.
 
 To observe the relationship between population and outage duration, we created a scatterplot between the `POPULATION` and `OUTAGE.DURATION` columns:
 
@@ -229,16 +228,16 @@ Below is the Empirical Distribution of our permutation test.
 ---
 ## FRAMING A PREDICTION PROBLEM
 
-The prediction problem we aim to focus on for this project is to build a model that can accurately predict the outage duration using multiple linear regression. Specifically, we plan on predicting values in the `OUTAGE.DURATION` column using other features in the dataset. We chose this response variable because being able to predict the duration of an outage can greatly reduce the negative impacts of a power outage. We believe this would be a valuable asset to companies and those who may be affected by outages. The metric we chose to evaluate our model is Root Mean Squared Error(RMSE) because RMSE is a reliable measurement to test the accuracy of regression models. 
+The prediction problem we aim to focus on for this project is to build a model that can accurately predict the cause category using classification. Specifically, we plan on predicting the specfic category in the `CAUSE.CATEGORY` column using other features in the dataset. We chose this response variable because being able to predict the cuase of an outage can greatly reduce the negative impacts of a power outage. We believe this would be a valuable asset to companies and those who may be affected by outages. The metric we chose to evaluate our model is f1 score because f1 score is a reliable measurement to test the accuracy of classification models. 
 
 We will only use features that would realistically be accessible during or before an outage. For example, the data in the column `OUTAGE.RESTORATION` would not be available to us during the time of the outage, therefore we will not use it as a feature in our predictive model. The features we plan on using are the columns `CLIMATE.REGION` and `PC.REALGSP.STATE`, since both will be accesible during the duration of the outage.
 
 ---
 ## BASELINE MODEL
 
-Our baseline model for the prediction problem was a linear regression model that used three features: `CLIMATE.REGION`, `PC.REALGSP.STATE`, and `CAUSE.CATEGORY.DETAIL`. The columns `CLIMATE.REGION` and `CAUSE.CATEGORY.DETAIL` are nominal datatypes, therefore we transformed them using one hot encoding. The column `PC.REALGSP.STATE` contains quantitative data. We did not transform that column in any way. 
+Our baseline model for the prediction problem was a DecisionTreeClassifier that used three features: `CLIMATE.REGION`, `PC.REALGSP.STATE`, and `MONTH`. The columns `CLIMATE.REGION` and `MONTH` are nominal datatypes, therefore we transformed them using one hot encoding. The column `PC.REALGSP.STATE` contains quantitative data. We did not transform that column in any way. 
 
-The performance of our baseline model was quite poor. When tested with training data, it received an RMSE of 3980.22 and when tested with unseen data, it received an RMSE of 7033.72. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
+The performance of our baseline model was quite poor when tested with unseen data. When tested with training data, it received an f1 score of .9330 and when tested with unseen data, it received an f1 score of .5606. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `CAUSE.CATEGORY` yet. A possible cause of the drastic differences between our training data and unseen data is that our model may have underfit the training set. 
 
 ---
 ## Final Model
