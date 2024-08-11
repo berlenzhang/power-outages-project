@@ -238,29 +238,14 @@ We will only use features that would realistically be accessible during or befor
 
 Our baseline model for the prediction problem was a linear regression model that used three features: `CLIMATE.REGION`, `PC.REALGSP.STATE`, and `CAUSE.CATEGORY.DETAIL`. The columns `CLIMATE.REGION` and `CAUSE.CATEGORY.DETAIL` are nominal datatypes, therefore we transformed them using one hot encoding. The column `PC.REALGSP.STATE` contains quantitative data. We did not transform that column in any way. 
 
-The performance of our baseline model was quite poor. When tested with training data, it received an RMSE of 3980.22 and when tested with unseen data, it received an RMSE of 7033.72. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
+The performance of our baseline model was quite poor. When tested with training data, it received an RMSE of 3980.22. When tested with unseen data, it received an RMSE of 7033.72. These results do not translate to a reliable predictive model. The poor performance of this model is due to the fact that we haven't found a sufficient combination of features to predict `OUTAGE.DURATION` yet.
 
 ---
 ## Final Model
 
-For our final model we decided to change our model from a linear regression to a Random Forest Regressor in order to make certain modifcations in attempts to decrease our root mean squared error. We realized that the columns we used in our baseline model are not fully correlated to the `OUTAGE.DURATION` so we first found all the columns in the dataset that are correlated to our target column. Additionally, we automated the feature evaluating process, which found the features that produced the least root mean squared errors. This helped us find the features to include in our model and also realize that features we used in the baseline model were hurting our model's accuracy.
+For our final model we decided to change our model from a linear regression to a Random Forest Regressor in order to make certain modifcations in attempts to decrease our root mean squared error. We realized that the columns we used in our baseline model are not fully correlated to the `OUTAGE.DURATION` so we first found all the columns in the dataset that are correlated to our target column. Additionally, we automated the feature evaluating process, which found the features that produced the least root mean squared errors. This helped us find the features to include in our model and also realize that features we used in the baseline model were hurting our model's accuracy. Lastly, we ran GridSearch CV in order to optimize the hyperparameters of our model.
 
-Our Final Model included the features 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Our Final Model included the features `TOTAL.SALES`, `POPDEN_RURAL`, `POPDEN_URBAN`, `CUSTOMERS.AFFECTED`, `CAUSE.CATEGORY`. We managed to reduce our RMSE on unseen data to 3490.05, which is significantly better than that of our baseline model.
 
 ----
 ## Fairness Analysis
